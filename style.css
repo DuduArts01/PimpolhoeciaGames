@@ -3,58 +3,70 @@
 *{
     margin: 0%;
     padding: 0%;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-header{
-    background-color: #111111;
-    box-shadow: 0px 0px 0px 3px rgba(102, 102, 102, 0.678);
-    height: 13vh;
+:root{
+    --headercolor: #111111;
+    --bodycolor: #2C6A91;
+    --headermenuhovercolor: #3030309c;
 }
 
-div.icon-header{
-    height: 13vh;
-    text-align: center;
-}
-
-#logo{
-    height: 13vh;
     
+header nav{
+    background-color: var(--headercolor);
+    height: 13vh;
+    font-family: montserrat;
 }
 
-menu{
-    display: none;
+label.logo{
+    padding: 0 3%;
+    color: white;
+    font-size: 2em;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+nav > ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav > ul > li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav > ul > li > a{
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+nav > ul > li > a:hover, .active{
+    background-color: var(--headermenuhovercolor);
+    transition: 0.5s;
+    padding: 10px;
 }
 
 i#menu{
-    display: block;
+    font-size: 30px;
     color: white;
-    background-color: #111111e5;  
-    display: block;
-    text-align: center;
-    padding: 10px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
 }
 
-i#menu:hover{
-    background-color: #1111119a;
-    color: black;
+#menu{
+    display: none;
 }
 
-menu > ul > li > a{
-    display: block;
-    color: white;
-    background-color: #3838389a;
-    text-decoration: none;
-    text-align: center;
-    border-top: 2px solid gray;
-    padding: 10px;
-}
-
-menu > ul > li > a:hover{
-    background-color: #6d6d6d9a;
-    color: black;
-}
-    
 body{
-    background-color: #2C6A91;
+    background-color: var(--bodycolor);
 }
+
