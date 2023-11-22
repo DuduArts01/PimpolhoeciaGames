@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pimpolho & Cia(Hash)</title>
+    <link rel="shortcut icon" href="data/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../../media.css">
+    <link rel="stylesheet" href="hash.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <i id="menu" class="material-icons" onclick="clickMenu()">menu</i>
+            <img src="../../data/logo.png" alt="logo" height="100%" style="margin-left: 2%;">
+            <ul id="itens"> 
+                <li><a href="../../index.html" class="active">Home</a></li>
+                <li><a href="../../about/about.html">Sobre</a></li>
+                <li><a href="../../support/support.html">Suporte</a></li>
+                <li><a href="../../community/community.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="screen_game">
+            <div class="x">Ponto X: </div>
+            <div class="y">Ponto Y: </div>
+            <table class="game" border="2">
+                <tr>
+                    <td class="square" onclick="togame(this)"></td>
+                    <td class="square" onclick="togame(this)"></td>
+                    <td class="square" onclick="togame(this)"></td>
+                </tr>
+                <tr>
+                    <td class="square" onclick="togame(this)"></td>
+                    <td class="square" onclick="togame(this)"></td>
+                    <td class="square" onclick="togame(this)"></td>
+                </tr>
+                <tr>
+                    <td class="square" onclick="togame(this)"></td>
+                    <td class="square" onclick="togame(this)"></td>
+                    <td class="square" onclick="togame(this)"></td>
+                </tr>
+            </table>
+            
+        </div>
+    </main>
+    <script src="../../script.js"></script>
+    <script src="hash.js"></script>
+</body>
+</html>
