@@ -25,25 +25,25 @@
     </header>
     <main>
         <div id="screen_game">
-            <div class="x">Ponto X: </div>
-            <div class="y">Ponto Y: </div>
-            <table class="game" border="2">
-                <tr>
-                    <td class="square" onclick="togame(this)"></td>
-                    <td class="square" onclick="togame(this)"></td>
-                    <td class="square" onclick="togame(this)"></td>
-                </tr>
-                <tr>
-                    <td class="square" onclick="togame(this)"></td>
-                    <td class="square" onclick="togame(this)"></td>
-                    <td class="square" onclick="togame(this)"></td>
-                </tr>
-                <tr>
-                    <td class="square" onclick="togame(this)"></td>
-                    <td class="square" onclick="togame(this)"></td>
-                    <td class="square" onclick="togame(this)"></td>
-                </tr>
-            </table>
+            <div id="menuhash">
+                <div id="HashTitle"><h1>Jogo Da Velha</h1></div>
+                <div id="point">
+                    <h2>Potuação</h2>
+                    <div class="x">Ponto X: </div>
+                    <div class="o">Ponto O: </div>
+                </div>
+            </div>
+            <div id="game">
+                <div id="p1" class="posGame" onclick="togame(1)"></div>
+                <div id="p2" class="posGame" onclick="togame(2)"></div>
+                <div id="p3" class="posGame" onclick="togame(3)"></div>
+                <div id="p4" class="posGame" onclick="togame(4)"></div>
+                <div id="p5" class="posGame" onclick="togame(5)"></div>
+                <div id="p6" class="posGame" onclick="togame(6)"></div>
+                <div id="p7" class="posGame" onclick="togame(7)"></div>
+                <div id="p8" class="posGame" onclick="togame(8)"></div>
+                <div id="p9" class="posGame" onclick="togame(9)"></div>
+            </div>
             
         </div>
     </main>

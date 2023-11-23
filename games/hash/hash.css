@@ -14,17 +14,37 @@ div#screen_game{
     padding: 20px;
 }
 
-.square{
-    width: 100px;
-    height: 100px;
-    font-size: 4em;
-    text-align: center;
-    background-color: blue;
-    color: white;
-    border-radius: 20px;
+div#game{
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-.game{
-    margin: auto;
-    border-radius: 20px;
+.posGame{
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
 }
+
+div#p1, #p2, #p4, #p5{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+div#p3, #p6 {
+    border-bottom: 1px solid black;
+}
+
+div#p7, #p8{
+    border-right: 1px solid black;
+
+}
+
