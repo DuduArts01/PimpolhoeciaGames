@@ -18,7 +18,7 @@ div#screen_game{
 
 div#game{
     width: 60%;
-    height: 80%;
+    height: 95%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -37,6 +37,16 @@ div#game{
     font-size: 3em;
 }
 
+@media screen and (max-width: 768px) {
+    div#game{
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: auto;
+    }
+}
 div#p1, #p2, #p4, #p5{
     border-right: 1px solid black;
     border-bottom: 1px solid black;
