@@ -7,7 +7,6 @@ var level = 1;
 var gameCPU = 1;
 var whoStart = 1;
 
-
 function cpu(){
     if(gaming){
         var m, n; //m is line and n is column
@@ -53,8 +52,8 @@ function checkWon(){
     //check diagonals
     if((game[0][0] == game[1][1]) && (game[1][1] == game[2][2])){
         return game[0][0];
-    } else if((game[0][2] == game[1][1]) && (game[1][1] == game[0][2])){
-        return game[0][0];
+    } else if((game[0][2] == game[1][1]) && (game[1][1] == game[2][0])){
+        return game[0][2];
     }
     return "";
 }
@@ -131,6 +130,7 @@ function togame(p){
             check = checkWon();
             if(check != ""){
                 alert(check + " Venceu")
+                point();
                 gaming = false;
             }
             cpu();
@@ -156,10 +156,6 @@ function updateBoard(){
 }
 
 function start(){
-    amerX = 0;
-    gamerY = 0;
-    //points
-
     gaming = true;
     gameCPU = 1;
     game = [
@@ -172,7 +168,18 @@ function start(){
         [document.getElementById("p4"), document.getElementById("p5"), document.getElementById("p6")],
         [document.getElementById("p7"), document.getElementById("p8"), document.getElementById("p9")]
     ];
+    updateBoard();
 
+    if(whoStart == 1){
+        whoStart = 0;
+        whoGame = whoStart;
+        document.getElementById("who_start").innerHTML = "Quem começa: jogador"
+    } else{
+        whoStart = 1;
+        whoGame = whoStart;
+        document.getElementById("who_start").innerHTML = "Quem começa: CPU"
+        cpu();
+    }
 }
 
 window.addEventListener("load", start);

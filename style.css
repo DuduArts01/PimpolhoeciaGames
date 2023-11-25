@@ -70,3 +70,6 @@ body{
     background-color: var(--bodycolor);
 }
 
+#itens{
+    display: none;
+}
