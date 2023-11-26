@@ -3,9 +3,10 @@ var board = [];;
 var whoGame = 0; //0 is the gamer
 var check;
 var gaming=true;
-var level = 1;
+var level = 2;
 var gameCPU = 1;
 var whoStart = 1;
+var play = 0;
 
 function cpu(){
     if(gaming){
@@ -17,7 +18,158 @@ function cpu(){
             } while(game[m][n] != "");
             game[m][n] = "O";
         } else if(level == 2){
-            //level 2
+        //attack
+            //line 1
+            if((game[0][0] == "O") && (game[0][1] == "O") && (game[0][2] == "")){
+                game[0][2] = "O";
+            } else if((game[0][0] == "O") && (game[0][1] == "") && (game[0][2] == "O")){
+                game[0][1] = "O";
+            } else if((game[0][0] == "") && (game[0][1] == "O") && (game[0][2] == "O")){
+                game[0][0] = "O";
+            } else
+            //line 2
+            if((game[1][0] == "O") && (game[1][1] == "O") && (game[1][2] == "")){
+                game[1][2] = "O";
+            } else if((game[1][0] == "O") && (game[1][1] == "") && (game[1][2] == "O")){
+                game[1][1] = "O";
+            } else if((game[1][0] == "") && (game[1][1] == "O") && (game[1][2] == "O")){
+                game[1][0] = "O";
+            } else
+            //line 3
+            if((game[2][0] == "O") && (game[2][1] == "O") && (game[2][2] == "")){
+                game[2][2] = "O";
+            } else if((game[2][0] == "O") && (game[2][1] == "") && (game[2][2] == "O")){
+                game[2][1] = "O";
+            } else if((game[2][0] == "") && (game[2][1] == "O") && (game[2][2] == "O")){
+                game[2][0] = "O";
+            } else
+
+            //column 1
+            if((game[0][0] == "O") && (game[1][0] == "O") && (game[2][0] == "")){
+                game[2][0] = "O";
+            } else if((game[0][0] == "O") && (game[1][0] == "") && (game[2][0] == "O")){
+                game[1][0] = "O";
+            } else if((game[0][0] == "") && (game[1][0] == "O") && (game[2][0] == "O")){
+                game[0][0] = "O";
+            } else
+            //column 2
+            if((game[0][1] == "O") && (game[1][1] == "O") && (game[2][1] == "")){
+                game[2][1] = "O";
+            } else if((game[0][1] == "O") && (game[1][1] == "") && (game[2][1] == "O")){
+                game[1][1] = "O";
+            } else if((game[0][1] == "") && (game[1][1] == "O") && (game[2][1] == "O")){
+                game[0][1] = "O";
+            } else
+            //column 3 
+            if((game[0][2] == "O") && (game[1][2] == "O") && (game[2][2] == "")){
+                game[2][2] = "O";
+            } else if((game[0][2] == "O") && (game[1][2] == "") && (game[2][2] == "O")){
+                game[1][2] = "O";
+            } else if((game[0][2] == "") && (game[1][2] == "O") && (game[2][2] == "O")){
+                game[0][2] = "O";
+            } else
+            //diagonal 1
+            if((game[0][0] == "O") && (game[1][1] == "O") && (game[2][2] == "")){
+                game[2][2] = "O";
+            } else if((game[0][0] == "O") && (game[1][1] == "") && (game[2][2] == "O")){
+                game[1][1] = "O";
+            } else if((game[0][0] == "") && (game[1][1] == "O") && (game[2][2] == "O")){
+                game[0][0] = "O";
+            } else
+            //diagonal 2
+            if((game[0][2] == "O") && (game[1][1] == "O") && (game[2][0] == "")){
+                game[2][0] = "O";
+            } else if((game[0][2] == "O") && (game[1][1] == "") && (game[2][0] == "O")){
+                game[1][1] = "O";
+            } else if((game[0][2] == "") && (game[1][1] == "O") && (game[2][0] == "O")){
+                game[0][2] = "O";
+            } else
+
+        //defence
+            //line 1
+            if((game[0][0] == "X") && (game[0][1] == "X") && (game[0][2] == "")){
+                game[0][2] = "O";
+            } else if((game[0][0] == "X") && (game[0][1] == "") && (game[0][2] == "X")){
+                game[0][1] = "O";
+            } else if((game[0][0] == "") && (game[0][1] == "X") && (game[0][2] == "X")){
+                game[0][0] = "O";
+            } else
+            //line 2
+            if((game[1][0] == "X") && (game[1][1] == "X") && (game[1][2] == "")){
+                game[1][2] = "O";
+            } else if((game[1][0] == "X") && (game[1][1] == "") && (game[1][2] == "X")){
+                game[1][1] = "O";
+            } else if((game[1][0] == "") && (game[1][1] == "X") && (game[1][2] == "X")){
+                game[1][0] = "O";
+            } else
+            //line 3
+            if((game[2][0] == "X") && (game[2][1] == "X") && (game[2][2] == "")){
+                game[2][2] = "O";
+            } else if((game[2][0] == "X") && (game[2][1] == "") && (game[2][2] == "X")){
+                game[2][1] = "O";
+            } else if((game[2][0] == "") && (game[2][1] == "X") && (game[2][2] == "X")){
+                game[2][0] = "O";
+            } else
+
+            //column 1
+            if((game[0][0] == "X") && (game[1][0] == "X") && (game[2][0] == "")){
+                game[2][0] = "O";
+            } else if((game[0][0] == "X") && (game[1][0] == "") && (game[2][0] == "X")){
+                game[1][0] = "O";
+            } else if((game[0][0] == "") && (game[1][0] == "X") && (game[2][0] == "X")){
+                game[0][0] = "O";
+            } else
+            //column 2
+            if((game[0][1] == "X") && (game[1][1] == "X") && (game[2][1] == "")){
+                game[2][1] = "O";
+            } else if((game[0][1] == "X") && (game[1][1] == "") && (game[2][1] == "X")){
+                game[1][1] = "O";
+            } else if((game[0][1] == "") && (game[1][1] == "X") && (game[2][1] == "X")){
+                game[0][1] = "O";
+            } else
+            //column 3 
+            if((game[0][2] == "X") && (game[1][2] == "X") && (game[2][2] == "")){
+                game[2][2] = "O";
+            } else if((game[0][2] == "X") && (game[1][2] == "") && (game[2][2] == "X")){
+                game[1][2] = "O";
+            } else if((game[0][2] == "") && (game[1][2] == "X") && (game[2][2] == "X")){
+                game[0][2] = "O";
+            } else
+            //diagonal 1
+            if((game[0][0] == "X") && (game[1][1] == "X") && (game[2][2] == "")){
+                game[2][2] = "O";
+            } else if((game[0][0] == "X") && (game[1][1] == "") && (game[2][2] == "X")){
+                game[1][1] = "O";
+            } else if((game[0][0] == "") && (game[1][1] == "X") && (game[2][2] == "X")){
+                game[0][0] = "O";
+            } else
+            //diagonal 2
+            if((game[0][2] == "X") && (game[1][1] == "X") && (game[2][0] == "")){
+                game[2][0] = "O";
+            } else if((game[0][2] == "X") && (game[1][1] == "") && (game[2][0] == "X")){
+                game[1][1] = "O";
+            } else if((game[0][2] == "") && (game[1][1] == "X") && (game[2][0] == "X")){
+                game[0][2] = "O";
+            } else {
+                if(play < 8){
+                    do{
+                        m = Math.round(Math.random() * 2);
+                        n = Math.round(Math.random() * 2);
+                    } while(game[m][n] != "");
+                    game[m][n] = "O";
+                } else {
+                    for(var x = 0; x < 3; ++x){
+                        for(var y = 0; y < 3; ++y){
+                            if(game[x][y] == ""){
+                                game[x][y] = "O";
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+    
         }
 
         check = checkWon();
@@ -26,8 +178,7 @@ function cpu(){
             alert(check + " Venceu")
             gaming = false;
         }
-
-        
+        ++play;
         whoGame = 0;
     }
 }
@@ -133,6 +284,7 @@ function togame(p){
                 point();
                 gaming = false;
             }
+            ++play;
             cpu();
         }
     }
@@ -156,6 +308,7 @@ function updateBoard(){
 }
 
 function start(){
+    play = 0;
     gaming = true;
     gameCPU = 1;
     game = [
