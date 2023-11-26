@@ -174,11 +174,14 @@ function cpu(){
 
         check = checkWon();
         updateBoard();
+        ++play;
         if(check != ""){
             alert(check + " Venceu")
             gaming = false;
+        } else if(play >= 8){
+            alert("Empate")
+            gaming = false;
         }
-        ++play;
         whoGame = 0;
     }
 }
