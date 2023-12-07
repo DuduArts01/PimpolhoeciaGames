@@ -7,7 +7,12 @@ var level = 2;
 var gameCPU = 1;
 var whoStart = 1;
 var play = 0;
-
+let pointX = document.getElementById("pointX")
+let pointO = document.getElementById("pointO")
+let pointDraw = document.querySelector("div#draw")
+var x = 0
+var o = 0;
+var draw = 0;
 function cpu(){
     if(gaming){
         var m, n; //m is line and n is column
@@ -176,9 +181,11 @@ function cpu(){
         updateBoard();
         ++play;
         if(check != ""){
-            alert(check + " Venceu")
+            //alert(check + " Venceu")
             gaming = false;
-        } else if(play >= 8){
+        } else if(play >= 9){
+            ++draw;
+            pointDraw.innerHTML = `Empate: ${draw}`
             alert("Empate")
             gaming = false;
         }
@@ -192,6 +199,15 @@ function checkWon(){
     //check lines
     for(i = 0; i < 3; ++i){
         if((game[i][0] == game[i][1]) && (game[i][1] == game[i][2])){
+            if(game[i][0] == "X"){
+                ++x;
+                alert("X Venceu")
+                pointX.innerHTML = `Ponto X: ${x}`            
+            } else if(game[i][0] == "O"){
+                ++o;
+                alert("O Venceu")
+                pointO.innerHTML = `Ponto O: ${o}`
+            }
             return game[i][0];
         }
     }
@@ -199,14 +215,41 @@ function checkWon(){
     //check columns
     for(j = 0; j < 3; ++j){
         if((game[0][j] == game[1][j]) && (game[1][j] == game[2][j])){
+            if(game[0][j] == "X"){
+                ++x;
+                alert("X Venceu")
+                pointX.innerHTML = `Ponto X: ${x}`            
+            } else if(game[0][j] == "O"){
+                ++o;
+                alert("O Venceu")
+                pointO.innerHTML = `Ponto O: ${o}`
+            }
             return game[0][j];
         }
     }
 
     //check diagonals
     if((game[0][0] == game[1][1]) && (game[1][1] == game[2][2])){
+        if(game[0][0] == "X"){
+            ++x;
+            alert("X Venceu")
+            pointX.innerHTML = `Ponto X: ${x}`            
+        } else if(game[0][0] == "O"){
+            ++o;
+            alert("O Venceu")
+            pointO.innerHTML = `Ponto O: ${o}`
+        }
         return game[0][0];
     } else if((game[0][2] == game[1][1]) && (game[1][1] == game[2][0])){
+        if(game[0][2] == "X"){
+            ++x;
+            alert("X Venceu")
+            pointX.innerHTML = `Ponto X: ${x}`            
+        } else if(game[0][2] == "O"){
+            ++o;
+            alert("O Venceu")
+            pointO.innerHTML = `Ponto O: ${o}`
+        }
         return game[0][2];
     }
     return "";
@@ -283,10 +326,10 @@ function togame(p){
             updateBoard();
             check = checkWon();
             if(check != ""){
-                alert(check + " Venceu")
+                //alert(check + " Venceu")
                 point();
                 gaming = false;
-            }
+            } 
             ++play;
             cpu();
         }

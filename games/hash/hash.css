@@ -8,6 +8,19 @@ main{
     margin-top: 2%;
 }
 
+div.o{
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    border: 1px solid black;
+    top: 35%;
+    left: 33%;
+}
+
+#HashTitle{
+    display: flex;
+}
+
 div#screen_game{
     background-color: white;
     width: 70%;
@@ -58,6 +71,5 @@ div#p3, #p6 {
 
 div#p7, #p8{
     border-right: 5px solid black;
-
 }
 
