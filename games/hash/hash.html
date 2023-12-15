@@ -23,29 +23,56 @@
             </ul>
         </nav>
     </header>
+    <a href="../../index.html" target="_self"><i id="back" class="material-icons">arrow_back</i></a>
     <main>
         <div id="screen_game">
-            <div id="menuhash">
-                <div id="HashTitle"><h1>Jogo Da Velha</h1></div>
-                <div id="who_start">Quem começa: </div>
-                <button onclick="start()">Start</button>
+            <div id="HashTitle"><h1>Jogo Da Velha</h1></div>
+            <div id="choose">
+                <div id="option">Escolha o modo abaixo:</div>
+                <div class="options_choose">
+                    <div id="choose_bot" onclick="clickChoose()">
+                        <img src="../../data/games/icon/bot/bot.png" alt="bot" class="img_bot">
+                    </div>
+                    <div id="choose_multiplayer">
+                        <img src="../../data/games/icon/multiplayer/multiplayer.png" alt="multiplayer" class="img_multiplayer">
+                        Em desenvolvimento...
+                    </div>
+                </div>
             </div>
-
-            <div id="pointO">Ponto O: 0</div>
-            <div id="pointX">Ponto X: 0</div>
-            <div id="draw">Empate: 0</div>
-            
-
-            <div id="game">
-                <div id="p1" class="posGame" onclick="togame(1)"></div>
-                <div id="p2" class="posGame" onclick="togame(2)"></div>
-                <div id="p3" class="posGame" onclick="togame(3)"></div>
-                <div id="p4" class="posGame" onclick="togame(4)"></div>
-                <div id="p5" class="posGame" onclick="togame(5)"></div>
-                <div id="p6" class="posGame" onclick="togame(6)"></div>
-                <div id="p7" class="posGame" onclick="togame(7)"></div>
-                <div id="p8" class="posGame" onclick="togame(8)"></div>
-                <div id="p9" class="posGame" onclick="togame(9)"></div>
+            <div id="bot">
+                <i id="back" class="material-icons" onclick="clickChoose()">arrow_back</i>
+                <div id="box_point_X">
+                    <img src="../../data/games/icon/player/player.png" alt="" class="img_point">
+                    <div id="pointX">0</div>
+                </div>
+                <div id="box_point_O">
+                    <img src="../../data/games/icon/bot/steve.png" alt="" class="img_point">
+                    <div id="pointO">0</div>
+                </div>
+                
+                <div id="box_point_draw">
+                    <div class="draw_title">Empate</div>
+                    <div id="draw">0</div>
+                </div>
+                <div id="box_who_start">
+                    <div class="background_who_start">
+                        <div id="who_start_phrase">Quem começa: </div>
+                        <div id="who_start"></div>
+                    </div>
+                </div>
+                <div id="button_play" onclick="start()">Próxima rodada</div>
+                
+                <div id="game">
+                    <div id="p1" class="posGame" onclick="togame(1)"></div>
+                    <div id="p2" class="posGame" onclick="togame(2)"></div>
+                    <div id="p3" class="posGame" onclick="togame(3)"></div>
+                    <div id="p4" class="posGame" onclick="togame(4)"></div>
+                    <div id="p5" class="posGame" onclick="togame(5)"></div>
+                    <div id="p6" class="posGame" onclick="togame(6)"></div>
+                    <div id="p7" class="posGame" onclick="togame(7)"></div>
+                    <div id="p8" class="posGame" onclick="togame(8)"></div>
+                    <div id="p9" class="posGame" onclick="togame(9)"></div>
+                </div>
             </div>
             
         </div>

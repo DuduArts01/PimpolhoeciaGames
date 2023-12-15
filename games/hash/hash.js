@@ -185,7 +185,7 @@ function cpu(){
             gaming = false;
         } else if(play >= 9){
             ++draw;
-            pointDraw.innerHTML = `Empate: ${draw}`
+            pointDraw.innerHTML = draw
             alert("Empate")
             gaming = false;
         }
@@ -202,11 +202,11 @@ function checkWon(){
             if(game[i][0] == "X"){
                 ++x;
                 alert("X Venceu")
-                pointX.innerHTML = `Ponto X: ${x}`            
+                pointX.innerHTML = x            
             } else if(game[i][0] == "O"){
                 ++o;
                 alert("O Venceu")
-                pointO.innerHTML = `Ponto O: ${o}`
+                pointO.innerHTML = o
             }
             return game[i][0];
         }
@@ -218,11 +218,11 @@ function checkWon(){
             if(game[0][j] == "X"){
                 ++x;
                 alert("X Venceu")
-                pointX.innerHTML = `Ponto X: ${x}`            
+                pointX.innerHTML = x            
             } else if(game[0][j] == "O"){
                 ++o;
                 alert("O Venceu")
-                pointO.innerHTML = `Ponto O: ${o}`
+                pointO.innerHTML = o
             }
             return game[0][j];
         }
@@ -233,22 +233,22 @@ function checkWon(){
         if(game[0][0] == "X"){
             ++x;
             alert("X Venceu")
-            pointX.innerHTML = `Ponto X: ${x}`            
+            pointX.innerHTML = x            
         } else if(game[0][0] == "O"){
             ++o;
             alert("O Venceu")
-            pointO.innerHTML = `Ponto O: ${o}`
+            pointO.innerHTML = o
         }
         return game[0][0];
     } else if((game[0][2] == game[1][1]) && (game[1][1] == game[2][0])){
         if(game[0][2] == "X"){
             ++x;
             alert("X Venceu")
-            pointX.innerHTML = `Ponto X: ${x}`            
+            pointX.innerHTML = x           
         } else if(game[0][2] == "O"){
             ++o;
             alert("O Venceu")
-            pointO.innerHTML = `Ponto O: ${o}`
+            pointO.innerHTML = o
         }
         return game[0][2];
     }
@@ -372,13 +372,25 @@ function start(){
     if(whoStart == 1){
         whoStart = 0;
         whoGame = whoStart;
-        document.getElementById("who_start").innerHTML = "Quem começa: jogador"
+        document.getElementById("who_start").innerHTML = "Jogador"
     } else{
         whoStart = 1;
         whoGame = whoStart;
-        document.getElementById("who_start").innerHTML = "Quem começa: CPU"
+        document.getElementById("who_start").innerHTML = "CPU"
         cpu();
     }
 }
 
 window.addEventListener("load", start);
+
+function clickChoose(){
+    if(bot.style.display == "block"){
+        bot.style.display = "none"
+        choose.style.display = "block"
+    } else{
+        bot.style.display = "block" 
+        choose.style.display = "none"  
+    }
+}
+
+

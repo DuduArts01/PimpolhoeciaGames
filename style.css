@@ -14,7 +14,16 @@
     --headermenuhovercolor: #3030309c;
 }
 
-    
+@font-face {
+    font-family: "games";
+    src: url("data/font/Games-Italic.ttf") format("truetype");
+}    
+
+@font-face {
+    font-family: "gamesplay";
+    src: url("data/font/Gameplay.ttf") format("truetype");
+}
+
 header nav{
     background-color: var(--headercolor);
     height: 13vh;
@@ -72,4 +81,38 @@ body{
 
 #itens{
     display: none;
+}
+
+main#main_index{
+    width: 70%;
+    margin: auto;
+}
+
+div#box_play_hash{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    width: 20%; 
+    border-radius: 10px;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    margin-top: 5%;
+    margin-right: 2%;
+}
+
+div.name_game{
+    background-color: black;
+    color: white;
+    font-family: "games", "Times", serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+
+}
+
+div.play{ 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }

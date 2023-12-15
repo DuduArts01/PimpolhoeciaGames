@@ -3,7 +3,7 @@
 main{
     background-color: black;
     width: 80%;
-    height: 80vh;
+    height: 90vh;
     margin: auto;
     margin-top: 2%;
 }
@@ -39,8 +39,8 @@ div#game{
 }
 
 .posGame{
-    width: 30%;
-    height: 20%;
+    width: 120px;
+    height: 100px;
     margin: 0px;
     padding: 0px;
     cursor: pointer;
@@ -50,16 +50,6 @@ div#game{
     font-size: 3em;
 }
 
-@media screen and (max-width: 768px) {
-    div#game{
-        width: 90%;
-        height: 60%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        margin: auto;
-    }
-}
 div#p1, #p2, #p4, #p5{
     border-right: 5px solid black;
     border-bottom: 5px solid black;
@@ -73,3 +63,218 @@ div#p7, #p8{
     border-right: 5px solid black;
 }
 
+div#HashTitle > h1{
+    width: 100%;
+    font-family: "gamesplay", "Times", serif;;
+    font-size: 3em;
+    font-weight: normal;
+    text-align: center;
+}
+
+img.img_point{
+    max-width: 100%;
+}
+
+div#box_point_O{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+}
+
+div#box_point_X{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    margin-right: 30%;
+    margin-left: 3%;
+}
+
+div#box_point_draw{
+    width: 15%;
+    height: 15%;
+    background-color: black;
+    position: absolute;
+    left: 42%;
+    top: 32%;
+    border-radius: 5px;
+}
+
+div.draw_title{
+    background-image: linear-gradient(90deg, #FFC154, #FFA750, #FF964D);
+    border-radius: 5px;
+    position: absolute;
+    align-items: center;
+    font-family: "games";
+    font-size: 2em;
+    text-align: center;
+    width: 95%;
+    height: 90%;
+    margin: 5px;
+}
+
+div#pointX{
+    position: absolute;
+    left: 63%;
+    top: 45%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#pointO{
+    position: absolute;
+    left: 63%;
+    top: 45%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#draw{
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#button_play{
+    position: absolute;
+    background-color: #00D864;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.212);
+    color: white;
+    padding: 1% 0.5% 1% 0.5%;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: center;
+}
+
+div#button_play:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+div#box_who_start{
+    background-color: black;
+    width: 40%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    margin: auto;
+    margin-bottom: 5px;
+    
+
+}
+
+div.background_who_start{
+    background-image: linear-gradient(90deg, #FFC154, #FFA750, #FF964D);
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 5px 0px;
+    text-align: center;
+    width: 98%;
+}
+
+div#who_start{
+    display: inline-block;
+    font-weight: bold;
+}
+
+div#who_start_phrase{
+    display: inline-block;
+    
+}
+
+i#back{
+    color: black;
+    position: absolute;
+    left: 3%;
+    top: 18%;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+
+i#back:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 2px 0px 0px 2px;
+}
+
+div#bot{
+    display: none;
+}
+
+div#multiplayer{
+    display: none;
+}
+
+div#choose_bot{
+    display: inline-block;
+    width: 30%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.212);
+    margin-right: 5%;
+}
+
+div#choose_bot:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+img.img_bot{
+    max-width: 100%;
+}
+
+div#choose_multiplayer{
+    display: inline-block;
+    width: 30%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.212);
+}
+
+div#choose_multiplayer:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+img.img_multiplayer{
+    max-width: 100%;
+}
+
+div#option{
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.options_choose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#choose{
+    margin-top: 20%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    div#game{
+        width: 90%;
+        height: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: auto;
+    }
+}
