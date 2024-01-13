@@ -3,7 +3,7 @@ var board = [];;
 var whoGame = 0; //0 is the gamer
 var check;
 var gaming=true;
-var level = 2;
+var level = 1;
 var gameCPU = 1;
 var whoStart = 1;
 var play = 0;
@@ -13,6 +13,7 @@ let pointDraw = document.querySelector("div#draw")
 var x = 0
 var o = 0;
 var draw = 0;
+
 function cpu(){
     if(gaming){
         var m, n; //m is line and n is column
@@ -390,7 +391,47 @@ function clickChoose(){
     } else{
         bot.style.display = "block" 
         choose.style.display = "none"  
+        start()
+        x = 0;
+        o = 0;
+        draw = 0;
+        pointO.innerHTML = o
+        pointX.innerHTML = x
+        pointDraw.innerHTML = draw
     }
 }
+
+function clickbackChoose(){
+    if(bot.style.display == "block"){
+        bot.style.display = "none"
+        levels.style.display = "none"
+        choose.style.display = "block"
+    } else{
+        bot.style.display = "block" 
+        choose.style.display = "none"  
+    }
+
+    if(levels.style.display == "block"){
+        levels.style.display = "none"
+    } else{
+        levels.style.display = "block" 
+    }
+}
+
+function clickLevel1(){
+    level = 1
+    levels.style.display = "none"
+}
+
+function clickLevel2(){
+    level = 2
+    levels.style.display = "none"
+}
+
+
+
+
+
+
 
 

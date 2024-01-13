@@ -25,6 +25,7 @@
     </header>
     <a href="../../index.html" target="_self"><i id="back" class="material-icons">arrow_back</i></a>
     <main>
+        
         <div id="screen_game">
             <div id="HashTitle"><h1>Jogo Da Velha</h1></div>
             <div id="choose">
@@ -39,8 +40,11 @@
                     </div>
                 </div>
             </div>
+
+            
+
             <div id="bot">
-                <i id="back" class="material-icons" onclick="clickChoose()">arrow_back</i>
+                <i id="back" class="material-icons" onclick="clickbackChoose()">arrow_back</i>
                 <div id="box_point_X">
                     <img src="../../data/games/icon/player/player.png" alt="" class="img_point">
                     <div id="pointX">0</div>
@@ -72,6 +76,16 @@
                     <div id="p7" class="posGame" onclick="togame(7)"></div>
                     <div id="p8" class="posGame" onclick="togame(8)"></div>
                     <div id="p9" class="posGame" onclick="togame(9)"></div>
+                </div>
+                <div id="levels">
+                    <div id="box_level">
+                        <div id="level1" onclick="clickLevel1()">
+                            Fácil
+                        </div>
+                        <div id="level2" onclick="clickLevel2()">
+                            Difícil
+                        </div>
+                    </div>
                 </div>
             </div>
             

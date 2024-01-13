@@ -204,10 +204,6 @@ i#back:hover{
     padding: 2px 0px 0px 2px;
 }
 
-div#bot{
-    display: none;
-}
-
 div#multiplayer{
     display: none;
 }
@@ -264,9 +260,61 @@ div.options_choose{
 
 div#choose{
     margin-top: 20%;
+    
+}
+
+div#box_level{
+    background-color: white;
+    display: flex;
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    left: 30%;
+    top: 50%;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.212);
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    border-radius: 5px;
+    opacity: 0.97;
 }
 
 
+div#level1{
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.212);
+    font-size: 1.5em;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+div#level1:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+div#level2{
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.212);
+    font-size: 1.5em;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+div#level2:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+div#bot{
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     div#game{
